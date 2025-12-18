@@ -5,10 +5,11 @@ function Particle() {
   return (
     <Particles
       id="tsparticles"
+      style={{ width: "100%", height: "100%" }}
       params={{
         particles: {
           number: {
-            value: 160,
+            value: window.innerWidth < 768 ? 80 : 160, // fewer particles on mobile
             density: {
               enable: true,
               value_area: 1500,
@@ -20,7 +21,7 @@ function Particle() {
           },
           move: {
             direction: "right",
-            speed: 0.05,
+            speed: window.innerWidth < 768 ? 0.02 : 0.05, // slower on mobile
           },
           size: {
             value: 1,

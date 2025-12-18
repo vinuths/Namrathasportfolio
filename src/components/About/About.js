@@ -13,37 +13,37 @@ function About() {
       <Particle />
       <Container fluid className="about-section">
         <Container>
-          <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Row 
+            className="justify-content-center" 
+            style={{ padding: "10px" }}
+          >
             <Col
-              md={7}
-              style={{
-                justifyContent: "center",
-                paddingTop: "30px",
-                paddingBottom: "50px",
-              }}
+              xs={12} md={7}
+              className="d-flex flex-column justify-content-center"
+              style={{ paddingTop: "30px", paddingBottom: "50px" }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+              <h1 className="text-center text-md-start" style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
                 Know Who <strong className="purple">I'M</strong>
               </h1>
               <Aboutcard />
             </Col>
             <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
-              className="about-img"
+              xs={12} md={5}
+              style={{ paddingTop: "30px", paddingBottom: "50px" }}
+              className="about-img d-flex justify-content-center align-items-center"
             >
-              <img src={laptopImg} alt="about" className="img-fluid" />
+              <img src={laptopImg} alt="about" className="img-fluid" style={{ maxWidth: "100%" }} />
             </Col>
           </Row>
 
           {/* Professional Skills Section */}
-          <h1 className="project-heading">
+          <h1 className="project-heading text-center text-md-start">
             Professional <strong className="purple">Skillset</strong>
           </h1>
           <Techstack />
 
           {/* Tools Section */}
-          <h1 className="project-heading">
+          <h1 className="project-heading text-center text-md-start">
             <strong className="purple">Tools</strong> I use
           </h1>
           <Toolstack />

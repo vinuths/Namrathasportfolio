@@ -12,18 +12,21 @@ function Footer() {
   let year = date.getFullYear();
 
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
+    <Container fluid className="footer" style={{ padding: "20px 0" }}>
+      <Row className="text-center text-md-left">
+        {/* Designed and Developed */}
+        <Col xs={12} md={4} className="footer-copywright mb-2 mb-md-0">
           <h3>Designed and Developed by Vinuth S</h3>
         </Col>
 
-        <Col md="4" className="footer-copywright">
+        {/* Copyright */}
+        <Col xs={12} md={4} className="footer-copywright mb-2 mb-md-0">
           <h3>Copyright © {year} Vinuth S</h3>
         </Col>
 
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
+        {/* Social Icons */}
+        <Col xs={12} md={4} className="footer-body">
+          <ul className="footer-icons" style={{ display: "flex", justifyContent: "center", gap: "15px", padding: 0, listStyle: "none" }}>
             {/* GitHub - REAL PROFILE */}
             <li className="social-icons">
               <a
@@ -32,7 +35,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillGithub />
+                <AiFillGithub size={25} />
               </a>
             </li>
 
@@ -44,7 +47,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+                <AiOutlineTwitter size={25} />
               </a>
             </li>
 
@@ -56,7 +59,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn size={25} />
               </a>
             </li>
 
@@ -68,7 +71,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiFillInstagram size={25} />
               </a>
             </li>
           </ul>

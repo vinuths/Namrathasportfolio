@@ -9,3 +9,48 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
 }
+
+/* Base styles are already applied above */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Slightly smaller font on mobile */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .home-content, .about-section, .project-section, .resume-section {
+    padding: 15px !important; /* reduce padding on smaller screens */
+  }
+
+  .project-card-view {
+    margin-bottom: 20px; /* add spacing between project cards */
+  }
+
+  .home-header h1,
+  .home-header .heading-name {
+    font-size: 1.8em; /* scale headings for smaller screens */
+  }
+
+  .home-about-body, .quote-card-view blockquote p {
+    font-size: 14px; /* readable text on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header h1,
+  .home-header .heading-name {
+    font-size: 1.5em; 
+  }
+
+  .home-about-body, .quote-card-view blockquote p {
+    font-size: 13px;
+  }
+
+  .tech-icons-text {
+    font-size: 10px; /* make tech stack text smaller */
+  }
+}

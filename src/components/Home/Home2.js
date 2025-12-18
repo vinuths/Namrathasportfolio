@@ -7,8 +7,8 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
-          <Col md={8} className="home-about-description">
+        <Row className="align-items-center">
+          <Col xs={12} md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
@@ -48,12 +48,24 @@ function Home2() {
             </p>
           </Col>
 
-          <Col md={4} className="myAvtar">
+          <Col xs={12} md={4} className="myAvtar text-center" style={{ marginTop: "30px" }}>
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myImg} className="img-fluid" alt="avatar" style={{ maxHeight: "300px", width: "100%", objectFit: "cover" }} />
             </Tilt>
           </Col>
         </Row>
+
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .home-about-description {
+              text-align: center;
+              padding: 20px 0;
+            }
+            .myAvtar {
+              margin-top: 20px;
+            }
+          }
+        `}</style>
       </Container>
     </Container>
   );
